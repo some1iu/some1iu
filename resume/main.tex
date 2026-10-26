@@ -1,0 +1,178 @@
+%----------------------------------------------------------------------------------------
+%  Kangana Ajay Khurana - Resume (HolboxAI :: AI Research Engineer / Scientist)
+%
+%  HOW TO USE ON OVERLEAF
+%   1. overleaf.com -> New Project -> Blank Project
+%   2. Replace the contents of main.tex with this file
+%   3. Menu -> Compiler: pdfLaTeX -> Recompile
+%
+%  Everything inside [square brackets] is a placeholder to fill in before sending.
+%
+%  HONESTY NOTE (delete this comment before submitting):
+%  Every claim below either comes from your own GitHub repository
+%  (some1iu/movie-streaming-platform, inspected line by line), from the team repository you
+%  linked (chetisha28/incursion-acm), or from information you supplied about your own work.
+%  No PyTorch training, Transformer implementation, RLHF/DPO/GRPO work, or published research
+%  is claimed, because no evidence for it exists yet. Once you have code, add it as a project
+%  with a repository link and move the corresponding keyword out of "Research Interests".
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,top=1.15cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{rulegray}{HTML}{9AA5B1}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,topsep=2pt,parsep=0pt,label=\textbullet}
+
+% Body text is set one step smaller than 10pt so the page stays clean and single-sided.
+\AtBeginDocument{\small}
+
+% Section heading: small caps + hairline rule
+\newcommand{\cvsection}[1]{%
+  \par\vspace{7pt}%
+  {\fontsize{11}{13}\selectfont\bfseries\scshape\color{accent}#1\par}%
+  \vspace{1.5pt}%
+  {\color{rulegray}\rule{\textwidth}{0.55pt}\par}%
+  \vspace{2.5pt}%
+}
+
+% Entry heading: title on the left, right-aligned meta on the right
+\newcommand{\entry}[2]{%
+  \par{\textbf{#1}}\hfill{\itshape\color{black!65}#2}\par}
+
+% Grey sub-line under an entry
+\newcommand{\subtle}[1]{%
+  \par{\color{black!65}#1}\par\vspace{1pt}}
+
+\begin{document}
+
+%--------------------------------------- HEADER ----------------------------------------
+\begin{center}
+  {\fontsize{20}{22}\selectfont\bfseries\scshape\color{accent} Kangana Ajay Khurana}\\[2pt]
+  {\small Computer Science \& Engineering Undergraduate \;\textbullet\; [City], India}\\[1pt]
+  {\small
+    \href{mailto:kanganakhurana04@gmail.com}{kanganakhurana04@gmail.com} \;\textbar\;
+    \href{https://github.com/some1iu}{github.com/some1iu} \;\textbar\;
+    \href{https://www.linkedin.com/in/PLACEHOLDER}{linkedin.com/in/PLACEHOLDER} \;\textbar\;
+    [+91 XX XXX XXXXX]
+  }
+\end{center}
+
+%--------------------------------------- SUMMARY ----------------------------------------
+\cvsection{Summary}
+Computer Science undergraduate aiming at research-oriented AI engineering. Foundation so far: a
+self-written Python and SQL application, a four-person full-stack web project, and coursework in
+algorithms, discrete mathematics, probability, object-oriented programming and databases. Currently
+strengthening linear algebra, probability and optimisation in order to implement learning algorithms
+from first principles, with a strong interest in deep learning, reinforcement learning and LLM
+post-training.
+
+%------------------------------------- INTERESTS ----------------------------------------
+\cvsection{Research Interests}
+Deep learning optimisation \;\textbullet\; reinforcement learning and post-training (reward modelling,
+RLHF, DPO, GRPO) \;\textbullet\; LLM and VLM architectures, multimodal learning \;\textbullet\;
+efficiency topics: Mixture-of-Experts, state-space models. \emph{(Study interests; not yet hands-on.)}
+
+%------------------------------------- EDUCATION ----------------------------------------
+\cvsection{Education}
+\entry{[B.Tech / B.E.] in Computer Science and Engineering --- [University Name]}
+      {[Start Year] -- [End Year]}
+\subtle{[City], India \;\textbullet\; Current year: [e.g.\ First Year] \;\textbullet\;
+        Expected graduation: [Month Year] \;\textbullet\; [CGPA / percentage, optional]}
+
+\vspace{2pt}
+\entry{Senior Secondary (Class XII), CBSE --- Delhi Public School, Pune}{2024 -- 2025}
+\subtle{Computer Science project track; the Python project below was written for this course}
+
+\vspace{2pt}
+\textbf{Coursework and current study:} Data Structures \& Algorithms; Discrete Mathematics and
+Probability; Object-Oriented Programming; Database Management Systems and relational SQL;
+[add others, e.g.\ Linear Algebra, Computer Organisation].
+
+%--------------------------------------- SKILLS ----------------------------------------
+\cvsection{Technical Skills}
+\begin{itemize}
+  \item \textbf{Programming:} Python (project experience); C and C++ (coursework); SQL (joins,
+        subqueries, aggregate functions, grouping, filtering).
+  \item \textbf{Web and backend:} HTML and CSS (fundamentals); JavaScript (basics); Node.js and
+        Express (recently started); React/Next.js client work in a team project; consuming and
+        debugging REST APIs.
+  \item \textbf{Databases and tools:} MySQL; PostgreSQL with Prisma (schema, migrations, seeding);
+        Git and GitHub; VS Code.
+  \item \textbf{Currently learning:} NumPy (in progress) and introductory Pandas; Node.js backend
+        development; linear algebra, probability and optimisation problem sets.
+\end{itemize}
+
+%--------------------------------------- PROJECTS ----------------------------------------
+\cvsection{Projects}
+
+\entry{Movie Streaming Platform}{Python, MySQL}
+\subtle{Individual project \;\textbullet\; console application, single file, $\approx$820 lines
+        \;\textbullet\;
+        \href{https://github.com/some1iu/movie-streaming-platform}%
+             {github.com/some1iu/movie-streaming-platform}}
+\begin{itemize}
+  \item Wrote a menu-driven console application on top of MySQL Connector/Python that handles account
+        creation and login, per-user genre preferences, movie search by title/genre/year, and rent or
+        purchase transactions.
+  \item Built a filter-driven SQL query builder that appends \texttt{WHERE} clauses only for the
+        criteria the user supplies, using parameterised queries for the search path; modelled the data
+        in three tables (user, movie, bill) and committed every transaction as a bill record.
+  \item Implemented genre-based recommendations, retrieval of binary movie data from the database and
+        itemised bill generation through file handling; centralised error handling for input, type, key
+        and \texttt{mysql.connector} errors so the session exits gracefully instead of crashing.
+\end{itemize}
+
+\vspace{3pt}
+\entry{ACM Incursion --- Conflict-Aware Events \& Expenses Manager}{Team of four}
+\subtle{Next.js/React client, Express API, Prisma, PostgreSQL \;\textbullet\;
+        \href{https://github.com/chetisha28/incursion-acm}%
+             {github.com/chetisha28/incursion-acm}}
+\begin{itemize}
+  \item Contributed to a full-stack platform for ACM student chapters that flags venue, time and
+        audience collisions before an event is published, gates proposals behind peer endorsement, and
+        tracks expenses against semester budgets.
+  \item Worked on the Next.js App Router client and its REST integration, and contributed to parts of
+        the Express/Prisma backend: JWT-protected endpoints, role-based access across viewer, executive
+        and core tiers, Zod request validation and \texttt{Decimal(12,2)} money columns.
+  \item Debugged integration problems across Prisma migrations, seed data and CORS configuration to get
+        the client running against the API locally.
+\end{itemize}
+
+\vspace{3pt}
+\entry{Open-Source Codebase Exploration --- Typebot}{Bun, Nx, Prisma, PostgreSQL}
+\subtle{Exploration only, no upstream contribution \;\textbullet\;
+        \href{https://github.com/some1iu/typebot.io}{github.com/some1iu/typebot.io}}
+\begin{itemize}
+  \item Independently set up and explored a large self-hosted chatbot-builder monorepo: Bun and Nx
+        workspace configuration, package and dependency graph, Prisma client generation and migrations,
+        environment variables, and the PostgreSQL services required for local development; worked
+        through dev-environment failures until the stack ran.
+\end{itemize}
+
+%------------------------------------- FOUNDATIONS ----------------------------------------
+\cvsection{Academic Foundations}
+\begin{itemize}
+  \item \textbf{Algorithms:} backtracking and recursion, working systematically through Sartaj Sahni's
+        algorithms text; standard data-structure and complexity exercises.
+  \item \textbf{Mathematics:} discrete mathematics and probability problem sets; coding-theory problems
+        including binary symmetric channels and transmission probabilities.
+  \item \textbf{Object-oriented programming:} compile-time polymorphism (overloading) versus runtime
+        polymorphism (overriding); class design and inheritance exercises.
+  \item \textbf{Databases:} relational schema design and SQL practice --- joins, subqueries, grouping,
+        aggregates and filtering.
+\end{itemize}
+
+\end{document}
