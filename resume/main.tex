@@ -1,45 +1,45 @@
 %----------------------------------------------------------------------------------------
 %  Kangana Ajay Khurana - Resume (HolboxAI :: AI Research Engineer / Scientist)
+%  Project-first revision. Every project bullet is traceable to source code (see README.md).
 %
-%  HOW TO USE ON OVERLEAF
+%  OVERLEAF
 %   1. overleaf.com -> New Project -> Blank Project
-%   2. Replace the contents of main.tex with this file
-%   3. Menu -> Compiler: pdfLaTeX -> Recompile
+%   2. Replace main.tex with this file, Menu -> Compiler: pdfLaTeX -> Recompile
 %
-%  Everything inside [square brackets] is a placeholder to fill in before sending.
+%  Fill in: [City]/phone, LinkedIn URL, university years + expected graduation, delete the
+%  HONESTY NOTE comment block below.
 %
-%  HONESTY NOTE (delete this comment before submitting):
-%  Every claim below either comes from your own GitHub repository
-%  (some1iu/movie-streaming-platform, inspected line by line), from the team repository you
-%  linked (chetisha28/incursion-acm), or from information you supplied about your own work.
-%  No PyTorch training, Transformer implementation, RLHF/DPO/GRPO work, or published research
-%  is claimed, because no evidence for it exists yet. Once you have code, add it as a project
-%  with a repository link and move the corresponding keyword out of "Research Interests".
+%  HONESTY NOTE (delete before submitting):
+%  Claims are limited to what the repositories show:
+%   - some1iu/movie-streaming-platform  : read in full (movie_streaming.py, ~820 lines)
+%   - chetisha28/incursion-acm          : team repo; my contribution described from my own account
+%   - some1iu/typebot.io                : unmodified fork, so described as local setup/exploration
+%  No PyTorch, GPU, Transformer training, RLHF/DPO/GRPO, benchmark or deployment claims appear,
+%  because nothing in the repositories supports them. The profile names deep learning and RL only
+%  as the direction I am working towards.
 %----------------------------------------------------------------------------------------
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage[a4paper,top=1.15cm,bottom=1.0cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[a4paper,top=1.1cm,bottom=1.0cm,left=1.45cm,right=1.45cm]{geometry}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{microtype}
 \usepackage{hyperref}
 
-\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{accent}{HTML}{17395C}
 \definecolor{rulegray}{HTML}{9AA5B1}
 \hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2pt}
-\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,topsep=2pt,parsep=0pt,label=\textbullet}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.4pt,topsep=2pt,parsep=0pt,label=\textbullet}
 
-% Body text is set one step smaller than 10pt so the page stays clean and single-sided.
 \AtBeginDocument{\small}
 
-% Section heading: small caps + hairline rule
 \newcommand{\cvsection}[1]{%
   \par\vspace{7pt}%
   {\fontsize{11}{13}\selectfont\bfseries\scshape\color{accent}#1\par}%
@@ -48,12 +48,12 @@
   \vspace{2.5pt}%
 }
 
-% Entry heading: title on the left, right-aligned meta on the right
-\newcommand{\entry}[2]{%
+% Project heading: name on the left, tech stack on the right
+\newcommand{\project}[2]{%
   \par{\textbf{#1}}\hfill{\itshape\color{black!65}#2}\par}
 
-% Grey sub-line under an entry
-\newcommand{\subtle}[1]{%
+% Grey meta line (links, role, scope)
+\newcommand{\meta}[1]{%
   \par{\color{black!65}#1}\par\vspace{1pt}}
 
 \begin{document}
@@ -61,7 +61,7 @@
 %--------------------------------------- HEADER ----------------------------------------
 \begin{center}
   {\fontsize{20}{22}\selectfont\bfseries\scshape\color{accent} Kangana Ajay Khurana}\\[2pt]
-  {\small Computer Science \& Engineering Undergraduate \;\textbullet\; [City], India}\\[1pt]
+  {\small B.Tech Computer Science \& Engineering, SVNIT Surat \;\textbullet\; Surat, India}\\[1pt]
   {\small
     \href{mailto:kanganakhurana04@gmail.com}{kanganakhurana04@gmail.com} \;\textbar\;
     \href{https://github.com/some1iu}{github.com/some1iu} \;\textbar\;
@@ -70,109 +70,105 @@
   }
 \end{center}
 
-%--------------------------------------- SUMMARY ----------------------------------------
-\cvsection{Summary}
-Computer Science undergraduate aiming at research-oriented AI engineering. Foundation so far: a
-self-written Python and SQL application, a four-person full-stack web project, and coursework in
-algorithms, discrete mathematics, probability, object-oriented programming and databases. Currently
-strengthening linear algebra, probability and optimisation in order to implement learning algorithms
-from first principles, with a strong interest in deep learning, reinforcement learning and LLM
-post-training.
+%--------------------------------------- PROFILE ----------------------------------------
+\cvsection{Profile}
+I learn by building and by reading other people's code. Working independently I wrote and finished a
+Python + MySQL application end to end; as part of a four-person team I built client and server-side
+features for a full-stack events and expenses platform; on my own I got a large open-source monorepo
+running locally to study how it is put together. I want to move that habit --- implement, measure,
+debug, repeat --- into deep learning and reinforcement learning research engineering, and I am
+working through the linear algebra, probability and optimisation needed to implement learning
+algorithms from first principles rather than call a library.
 
-%------------------------------------- INTERESTS ----------------------------------------
-\cvsection{Research Interests}
-Deep learning optimisation \;\textbullet\; reinforcement learning and post-training (reward modelling,
-RLHF, DPO, GRPO) \;\textbullet\; LLM and VLM architectures, multimodal learning \;\textbullet\;
-efficiency topics: Mixture-of-Experts, state-space models. \emph{(Study interests; not yet hands-on.)}
+%--------------------------------------- PROJECTS ----------------------------------------
+\cvsection{Selected Projects}
 
-%------------------------------------- EDUCATION ----------------------------------------
-\cvsection{Education}
-\entry{[B.Tech / B.E.] in Computer Science and Engineering --- [University Name]}
-      {[Start Year] -- [End Year]}
-\subtle{[City], India \;\textbullet\; Current year: [e.g.\ First Year] \;\textbullet\;
-        Expected graduation: [Month Year] \;\textbullet\; [CGPA / percentage, optional]}
+\project{Movie Streaming Platform}{Python, MySQL}
+\meta{Independent project \;\textbullet\; single module, $\approx$820 lines \;\textbullet\;
+      \href{https://github.com/some1iu/movie-streaming-platform}%
+           {github.com/some1iu/movie-streaming-platform}}
+\begin{itemize}
+  \item Built a console application that lets a user register and log in, browse a movie catalogue by
+        title, genre and release year, and rent or buy a title, with an itemised bill written to disk
+        at the end of each transaction.
+  \item Modelled the data in three tables and implemented every access path against them: \texttt{user} (username, name, password, three preferred genres, access level),
+        \texttt{movie} (code, title, year, rating, genre, summary, rent and buy cost, binary asset) and
+        \texttt{bill} (transaction number, date, rent/buy flag, movie code, user).
+  \item Wrote a filter-driven query builder that appends \texttt{WHERE} clauses only for the criteria
+        the user actually supplies --- \texttt{LIKE} matching for titles, exact matching for genre and
+        year --- and used parameterised statements on the registration and search paths so user input
+        is bound rather than concatenated.
+  \item Generated recommendations by reading the user's three stored genre columns and building them
+        into an \texttt{IN} query on the home screen; handled the receipt side with file handling, and
+        stored movie image data as a \texttt{BLOB} that is written back out to a file when a
+        transaction completes.
+  \item Funnelled the risky call sites through one error handler covering
+        \texttt{mysql.connector} errors, bad input, type and key errors, so an invalid entry returns
+        the user to the menu instead of terminating the session. No automated tests yet; correctness
+        was checked by exercising each flow by hand.
+\end{itemize}
 
-\vspace{2pt}
-\entry{Senior Secondary (Class XII), CBSE --- Delhi Public School, Pune}{2024 -- 2025}
-\subtle{Computer Science project track; the Python project below was written for this course}
+\vspace{3pt}
+\project{ACM Incursion --- Conflict-Aware Events \& Expenses Manager}{Next.js, Express, Prisma, PostgreSQL}
+\meta{Four-person team (client/server repository, not a solo build) \;\textbullet\;
+      \href{https://github.com/chetisha28/incursion-acm}{github.com/chetisha28/incursion-acm}}
+\begin{itemize}
+  \item Contributed to a platform for ACM student chapters that detects venue, time and audience
+        collisions between proposed events before publication, gates proposals behind peer endorsement,
+        and tracks expenses against semester budgets.
+  \item Implemented client-side components against the REST API --- parsing the
+        \texttt{\{success, message, data\}} envelope, surfacing 400/401/403/409 responses in the
+        relevant form or access view, and keeping the session token in tab-scoped storage --- and
+        contributed to server-side pieces: JWT-protected routes, role-gated access across viewer,
+        executive and core tiers, Zod request validation and \texttt{Decimal(12,2)} money columns in
+        Prisma.
+  \item Debugged integration faults across Prisma migrations, seed data and CORS configuration to get
+        the client talking to the API locally; ran the backend's Jest/Supertest suite and the live
+        end-to-end workflow script while fixing these.
+\end{itemize}
 
-\vspace{2pt}
-\textbf{Coursework and current study:} Data Structures \& Algorithms; Discrete Mathematics and
-Probability; Object-Oriented Programming; Database Management Systems and relational SQL;
-[add others, e.g.\ Linear Algebra, Computer Organisation].
+\vspace{3pt}
+\project{Open-Source Codebase Exploration --- Typebot}{Bun, Nx, Prisma, PostgreSQL}
+\meta{Local setup and source reading only; no upstream contribution \;\textbullet\;
+      \href{https://github.com/some1iu/typebot.io}{github.com/some1iu/typebot.io}}
+\begin{itemize}
+  \item Set up a large self-hosted chatbot-builder monorepo (\texttt{apps/} and \texttt{packages/}
+        workspaces) locally to read how a production codebase of that size is organised: Bun and Nx
+        workspace configuration, the package dependency graph, Prisma client generation and migration
+        workflow, environment-variable plumbing across packages, and the PostgreSQL service the stack
+        expects.
+  \item Worked through the resulting dev-environment failures (Prisma client generation, environment
+        variables, database connectivity) until the stack ran, using build output and startup errors to
+        locate each fault.
+\end{itemize}
 
 %--------------------------------------- SKILLS ----------------------------------------
 \cvsection{Technical Skills}
 \begin{itemize}
-  \item \textbf{Programming:} Python (project experience); C and C++ (coursework); SQL (joins,
-        subqueries, aggregate functions, grouping, filtering).
-  \item \textbf{Web and backend:} HTML and CSS (fundamentals); JavaScript (basics); Node.js and
-        Express (recently started); React/Next.js client work in a team project; consuming and
-        debugging REST APIs.
-  \item \textbf{Databases and tools:} MySQL; PostgreSQL with Prisma (schema, migrations, seeding);
-        Git and GitHub; VS Code.
-  \item \textbf{Currently learning:} NumPy (in progress) and introductory Pandas; Node.js backend
-        development; linear algebra, probability and optimisation problem sets.
+  \item \textbf{Python} --- the language of my independent project: menu-driven control flow, SQL
+        access through MySQL Connector/Python, file handling, shared error handling.
+  \item \textbf{Databases} --- MySQL schema design, joins and filtering, parameterised queries;
+        PostgreSQL with Prisma (schema, migrations, seeding) in the team project.
+  \item \textbf{Web and backend} --- Express REST endpoints and JWT authentication, React/Next.js App
+        Router client work, HTML/CSS, JavaScript at a basic level.
+  \item \textbf{C and C++} --- coursework level, including inheritance and compile-time versus runtime
+        polymorphism.
+  \item \textbf{Tools} --- Git and GitHub, VS Code, Bun and Nx workspace commands, reading unfamiliar
+        source trees.
+  \item \textbf{Currently learning} --- Node.js; NumPy and introductory Pandas; linear algebra,
+        probability and optimisation. \emph{(Learning, not project experience.)}
 \end{itemize}
 
-%--------------------------------------- PROJECTS ----------------------------------------
-\cvsection{Projects}
-
-\entry{Movie Streaming Platform}{Python, MySQL}
-\subtle{Individual project \;\textbullet\; console application, single file, $\approx$820 lines
-        \;\textbullet\;
-        \href{https://github.com/some1iu/movie-streaming-platform}%
-             {github.com/some1iu/movie-streaming-platform}}
-\begin{itemize}
-  \item Wrote a menu-driven console application on top of MySQL Connector/Python that handles account
-        creation and login, per-user genre preferences, movie search by title/genre/year, and rent or
-        purchase transactions.
-  \item Built a filter-driven SQL query builder that appends \texttt{WHERE} clauses only for the
-        criteria the user supplies, using parameterised queries for the search path; modelled the data
-        in three tables (user, movie, bill) and committed every transaction as a bill record.
-  \item Implemented genre-based recommendations, retrieval of binary movie data from the database and
-        itemised bill generation through file handling; centralised error handling for input, type, key
-        and \texttt{mysql.connector} errors so the session exits gracefully instead of crashing.
-\end{itemize}
-
-\vspace{3pt}
-\entry{ACM Incursion --- Conflict-Aware Events \& Expenses Manager}{Team of four}
-\subtle{Next.js/React client, Express API, Prisma, PostgreSQL \;\textbullet\;
-        \href{https://github.com/chetisha28/incursion-acm}%
-             {github.com/chetisha28/incursion-acm}}
-\begin{itemize}
-  \item Contributed to a full-stack platform for ACM student chapters that flags venue, time and
-        audience collisions before an event is published, gates proposals behind peer endorsement, and
-        tracks expenses against semester budgets.
-  \item Worked on the Next.js App Router client and its REST integration, and contributed to parts of
-        the Express/Prisma backend: JWT-protected endpoints, role-based access across viewer, executive
-        and core tiers, Zod request validation and \texttt{Decimal(12,2)} money columns.
-  \item Debugged integration problems across Prisma migrations, seed data and CORS configuration to get
-        the client running against the API locally.
-\end{itemize}
-
-\vspace{3pt}
-\entry{Open-Source Codebase Exploration --- Typebot}{Bun, Nx, Prisma, PostgreSQL}
-\subtle{Exploration only, no upstream contribution \;\textbullet\;
-        \href{https://github.com/some1iu/typebot.io}{github.com/some1iu/typebot.io}}
-\begin{itemize}
-  \item Independently set up and explored a large self-hosted chatbot-builder monorepo: Bun and Nx
-        workspace configuration, package and dependency graph, Prisma client generation and migrations,
-        environment variables, and the PostgreSQL services required for local development; worked
-        through dev-environment failures until the stack ran.
-\end{itemize}
-
-%------------------------------------- FOUNDATIONS ----------------------------------------
-\cvsection{Academic Foundations}
-\begin{itemize}
-  \item \textbf{Algorithms:} backtracking and recursion, working systematically through Sartaj Sahni's
-        algorithms text; standard data-structure and complexity exercises.
-  \item \textbf{Mathematics:} discrete mathematics and probability problem sets; coding-theory problems
-        including binary symmetric channels and transmission probabilities.
-  \item \textbf{Object-oriented programming:} compile-time polymorphism (overloading) versus runtime
-        polymorphism (overriding); class design and inheritance exercises.
-  \item \textbf{Databases:} relational schema design and SQL practice --- joins, subqueries, grouping,
-        aggregates and filtering.
-\end{itemize}
+%--------------------------------------- EDUCATION ----------------------------------------
+\cvsection{Education}
+{\textbf{B.Tech in Computer Science and Engineering} --- Sardar Vallabhbhai National Institute of
+ Technology (SVNIT), Surat}\hfill{\itshape\color{black!65}[Start Year] -- Present}\par
+\meta{Expected graduation [Month Year] \;\textbullet\; relevant coursework: data structures and
+      algorithms, discrete mathematics and probability, object-oriented programming, database
+      management systems.}
+\vspace{2pt}
+{\textbf{Senior Secondary (Class XII), CBSE} --- Delhi Public School, Pune}\hfill
+{\itshape\color{black!65}2024 -- 2025}\par
+\meta{Computer Science stream; the Python and MySQL project above was written for this course.}
 
 \end{document}
